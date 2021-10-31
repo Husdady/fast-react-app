@@ -91,17 +91,13 @@ module.exports = function (env) {
     },
     resolve: {
       alias: {
+        // Instalar preact si se desea usar en vez de react
         // react: "preact/compat",
         // "react-dom": "preact/compat",
-        "@root": __dirname,
-        "@assets": path.resolve(__dirname, "public/assets/"),
-        "@pages": path.resolve(__dirname, "src/pages/"),
-        "@elements": path.resolve(
-          __dirname,
-          "src/components/elements/_exports"
-        ),
-        "@layout": path.resolve(__dirname, "src/components/layout/"),
-        "@styles": path.resolve(__dirname, "src/styles/"),
+        // Define tus rutas absolutas, puedes usar una ruta absoluta de esta manera: import MyComponent from "@components/MyComponent". Ejemplos en las 3 lineas de abajo.
+        // "@root": __dirname,
+        // "@assets": path.resolve(__dirname, "public/assets/"),
+        // "@components": path.resolve(__diranme, "src/components/")
       },
       extensions: [".js", ".jsx", ".json"],
     },
