@@ -1,7 +1,7 @@
 {
-  "name": "emprendimiento-y-salud",
+  "name": "your-proyect-name",
   "version": "1.0.0",
-  "description": "Emprendimiento y Salud distribuye productos Omnilife y Seytú, en nuestra página hablamos sobre el negocio Omnilife, nuestra distribuidora independiente Yessica Milagros brinda asesoramiento para emprendender con las redes de mercadeo.",
+  "description": "your proyect description",
   "main": "index.js",
   "scripts": {
     "build": "npx webpack --env NODE_ENV=production",
