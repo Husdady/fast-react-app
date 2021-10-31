@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Importa tu icono -->
+  <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="theme-color" content="#000" />
+  <meta name="description"
+    content="your app description">
+  <meta name="keywords"
+    content="your keywords">
+  <!-- Styles -->
+  <!-- Importa tus estilos de assets -->
+  <!-- <link rel="preload" href="%PUBLIC_URL%/assets/css/mystyle.css" as="style" onload="this.onload=null;this.rel='stylesheet'" /> -->
+  <title>Your app title</title>
+  <noscript>
+    <b>You need to enable JavaScript to run this app.</b>
+    <b>Necesita habilitar JavaScript para ejecutar esta aplicación.</b>
+  </noscript>
+
+  <% for(let i=0; i<htmlWebpackPlugin.files.css.length; i++) {%>
+    <link rel="preload" href="<%= htmlWebpackPlugin.files.css[i] %>" as="style"
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <% } %>
+
+</head>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <% for(let i=0; i<htmlWebpackPlugin.files.js.length; i++) {%>
+    <script defer src="<%= htmlWebpackPlugin.files.js[i] %>"></script>
+    <% } %>
+
+</body>
+
+</html>
